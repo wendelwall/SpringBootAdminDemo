@@ -14,7 +14,14 @@ public class SecuritySecureConfig extends WebSecurityConfigurerAdapter {
     public SecuritySecureConfig(AdminServerProperties adminServerProperties) {
         this.adminContextPath = adminServerProperties.getContextPath();
     }
+    //不用登陆
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.authorizeRequests().anyRequest().permitAll()
+//                .and().csrf().disable();
+//    }
 
+    //需要登陆
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // @formatter:off

@@ -1,4 +1,8 @@
 spring:
+  security:
+    user:
+      name: admin
+      password: password
   application:
     name: eureka-server
 eureka:
@@ -9,7 +13,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://admin:password@localhost:8761/eureka/
 server:
   port: 8761
 
